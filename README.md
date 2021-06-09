@@ -1,5 +1,7 @@
 # GrowthOps Ext React
 
+[![codecov](https://codecov.io/gh/growthops-digital/ext-react/branch/main/graph/badge.svg?token=4ECGIC3SDY)](https://codecov.io/gh/growthops-digital/ext-react)
+
 A collection of useful components, helpers, and extensions for React projects.
 
 ## Utilities
