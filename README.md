@@ -20,7 +20,7 @@ import {inc} from 'ramda';
 const Example = () = {
 	const {state, setState} = useState({counter: 0});
 
-	const incrementCounter = setState({counter: inc});
+	const incrementCounter = () => setState({counter: inc});
 
 	return (
 		<button type="button" onClick={incrementCounter}>Increment</button>
@@ -38,7 +38,7 @@ import {useState} from '@growthops/ext-react';
 const Example = () = {
 	const {state, setState} = useState({counter: 0});
 
-	const setCounterToFortyTwo = setState({counter: 42});
+	const setCounterToFortyTwo = () => setState({counter: 42});
 
 	return (
 		<button type="button" onClick={setCounterToFortyTwo}>Set</button>
