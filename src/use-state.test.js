@@ -17,3 +17,25 @@ test('should return incremented counter value', () => {
 
 	expect(result.current.state.counter).toBe(initialState.counter + 1);
 });
+
+test('should return new counter value as passed-in', () => {
+	const {result} = renderHook(() => useState(initialState));
+
+	act(() => result.current.setState({counter: 42}));
+
+	expect(result.current.state.counter).toBe(42);
+});
+
+test('should return new foo value as passed-in, and incremented counter', () => {
+	const {result} = renderHook(() => useState(initialState));
+
+	act(() => result.current.setState({
+		foo: 'baz',
+		counter: inc
+	}));
+
+	expect(result.current.state).toStrictEqual({
+		foo: 'baz',
+		counter: initialState.counter + 1
+	});
+});
