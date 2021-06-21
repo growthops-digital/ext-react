@@ -31,11 +31,11 @@ test('should return new foo value as passed-in, and incremented counter', () => 
 
 	act(() => result.current.setState({
 		foo: 'baz',
-		counter: inc
+		counter: inc,
 	}));
 
 	expect(result.current.state).toStrictEqual({
 		foo: 'baz',
-		counter: initialState.counter + 1
+		counter: initialState.counter + 1,
 	});
 });
